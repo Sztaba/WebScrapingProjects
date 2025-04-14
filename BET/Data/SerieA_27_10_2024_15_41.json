@@ -1,0 +1,482 @@
+{
+    "0": {
+        "teamA": "Verona",
+        "teamB": "Monza",
+        "goalsA": "0",
+        "goalsB": "3"
+    },
+    "1": {
+        "teamA": "AS Roma",
+        "teamB": "Inter",
+        "goalsA": "0",
+        "goalsB": "1"
+    },
+    "2": {
+        "teamA": "Cagliari",
+        "teamB": "Torino",
+        "goalsA": "3",
+        "goalsB": "2"
+    },
+    "3": {
+        "teamA": "Lecce",
+        "teamB": "Fiorentina",
+        "goalsA": "0",
+        "goalsB": "6"
+    },
+    "4": {
+        "teamA": "Venezia",
+        "teamB": "Atalanta",
+        "goalsA": "0",
+        "goalsB": "2"
+    },
+    "5": {
+        "teamA": "Empoli",
+        "teamB": "Napoli",
+        "goalsA": "0",
+        "goalsB": "1"
+    },
+    "6": {
+        "teamA": "Juventus",
+        "teamB": "Lazio",
+        "goalsA": "1",
+        "goalsB": "0"
+    },
+    "7": {
+        "teamA": "AC Milan",
+        "teamB": "Udinese",
+        "goalsA": "1",
+        "goalsB": "0"
+    },
+    "8": {
+        "teamA": "Como",
+        "teamB": "Parma",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "9": {
+        "teamA": "Genoa",
+        "teamB": "Bologna",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "10": {
+        "teamA": "Fiorentina",
+        "teamB": "AC Milan",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "11": {
+        "teamA": "Monza",
+        "teamB": "AS Roma",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "12": {
+        "teamA": "Bologna",
+        "teamB": "Parma",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "13": {
+        "teamA": "Lazio",
+        "teamB": "Empoli",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "14": {
+        "teamA": "Juventus",
+        "teamB": "Cagliari",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "15": {
+        "teamA": "Inter",
+        "teamB": "Torino",
+        "goalsA": "3",
+        "goalsB": "2"
+    },
+    "16": {
+        "teamA": "Atalanta",
+        "teamB": "Genoa",
+        "goalsA": "5",
+        "goalsB": "1"
+    },
+    "17": {
+        "teamA": "Udinese",
+        "teamB": "Lecce",
+        "goalsA": "1",
+        "goalsB": "0"
+    },
+    "18": {
+        "teamA": "Verona",
+        "teamB": "Venezia",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "19": {
+        "teamA": "Napoli",
+        "teamB": "Como",
+        "goalsA": "3",
+        "goalsB": "1"
+    },
+    "20": {
+        "teamA": "Parma",
+        "teamB": "Cagliari",
+        "goalsA": "2",
+        "goalsB": "3"
+    },
+    "21": {
+        "teamA": "Napoli",
+        "teamB": "Monza",
+        "goalsA": "2",
+        "goalsB": "0"
+    },
+    "22": {
+        "teamA": "Empoli",
+        "teamB": "Fiorentina",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "23": {
+        "teamA": "AS Roma",
+        "teamB": "Venezia",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "24": {
+        "teamA": "Como",
+        "teamB": "Verona",
+        "goalsA": "3",
+        "goalsB": "2"
+    },
+    "25": {
+        "teamA": "Torino",
+        "teamB": "Lazio",
+        "goalsA": "2",
+        "goalsB": "3"
+    },
+    "26": {
+        "teamA": "Bologna",
+        "teamB": "Atalanta",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "27": {
+        "teamA": "Genoa",
+        "teamB": "Juventus",
+        "goalsA": "0",
+        "goalsB": "3"
+    },
+    "28": {
+        "teamA": "Udinese",
+        "teamB": "Inter",
+        "goalsA": "2",
+        "goalsB": "3"
+    },
+    "29": {
+        "teamA": "AC Milan",
+        "teamB": "Lecce",
+        "goalsA": "3",
+        "goalsB": "0"
+    },
+    "30": {
+        "teamA": "Atalanta",
+        "teamB": "Como",
+        "goalsA": "2",
+        "goalsB": "3"
+    },
+    "31": {
+        "teamA": "Inter",
+        "teamB": "AC Milan",
+        "goalsA": "1",
+        "goalsB": "2"
+    },
+    "32": {
+        "teamA": "AS Roma",
+        "teamB": "Udinese",
+        "goalsA": "3",
+        "goalsB": "0"
+    },
+    "33": {
+        "teamA": "Monza",
+        "teamB": "Bologna",
+        "goalsA": "1",
+        "goalsB": "2"
+    },
+    "34": {
+        "teamA": "Fiorentina",
+        "teamB": "Lazio",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "35": {
+        "teamA": "Lecce",
+        "teamB": "Parma",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "36": {
+        "teamA": "Juventus",
+        "teamB": "Napoli",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "37": {
+        "teamA": "Venezia",
+        "teamB": "Genoa",
+        "goalsA": "2",
+        "goalsB": "0"
+    },
+    "38": {
+        "teamA": "Verona",
+        "teamB": "Torino",
+        "goalsA": "2",
+        "goalsB": "3"
+    },
+    "39": {
+        "teamA": "Cagliari",
+        "teamB": "Empoli",
+        "goalsA": "0",
+        "goalsB": "2"
+    },
+    "40": {
+        "teamA": "Lazio",
+        "teamB": "Verona",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "41": {
+        "teamA": "Parma",
+        "teamB": "Udinese",
+        "goalsA": "2",
+        "goalsB": "3"
+    },
+    "42": {
+        "teamA": "Monza",
+        "teamB": "Inter",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "43": {
+        "teamA": "Cagliari",
+        "teamB": "Napoli",
+        "goalsA": "0",
+        "goalsB": "4"
+    },
+    "44": {
+        "teamA": "Atalanta",
+        "teamB": "Fiorentina",
+        "goalsA": "3",
+        "goalsB": "2"
+    },
+    "45": {
+        "teamA": "Torino",
+        "teamB": "Lecce",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "46": {
+        "teamA": "Genoa",
+        "teamB": "AS Roma",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "47": {
+        "teamA": "AC Milan",
+        "teamB": "Venezia",
+        "goalsA": "4",
+        "goalsB": "0"
+    },
+    "48": {
+        "teamA": "Empoli",
+        "teamB": "Juventus",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "49": {
+        "teamA": "Como",
+        "teamB": "Bologna",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "50": {
+        "teamA": "Juventus",
+        "teamB": "AS Roma",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "51": {
+        "teamA": "Udinese",
+        "teamB": "Como",
+        "goalsA": "1",
+        "goalsB": "0"
+    },
+    "52": {
+        "teamA": "Fiorentina",
+        "teamB": "Monza",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "53": {
+        "teamA": "Genoa",
+        "teamB": "Verona",
+        "goalsA": "0",
+        "goalsB": "2"
+    },
+    "54": {
+        "teamA": "Lazio",
+        "teamB": "AC Milan",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "55": {
+        "teamA": "Napoli",
+        "teamB": "Parma",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "56": {
+        "teamA": "Bologna",
+        "teamB": "Empoli",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "57": {
+        "teamA": "Lecce",
+        "teamB": "Cagliari",
+        "goalsA": "1",
+        "goalsB": "0"
+    },
+    "58": {
+        "teamA": "Inter",
+        "teamB": "Atalanta",
+        "goalsA": "4",
+        "goalsB": "0"
+    },
+    "59": {
+        "teamA": "Venezia",
+        "teamB": "Torino",
+        "goalsA": "0",
+        "goalsB": "1"
+    },
+    "60": {
+        "teamA": "Verona",
+        "teamB": "Juventus",
+        "goalsA": "0",
+        "goalsB": "3"
+    },
+    "61": {
+        "teamA": "Cagliari",
+        "teamB": "Como",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "62": {
+        "teamA": "AS Roma",
+        "teamB": "Empoli",
+        "goalsA": "1",
+        "goalsB": "2"
+    },
+    "63": {
+        "teamA": "Napoli",
+        "teamB": "Bologna",
+        "goalsA": "3",
+        "goalsB": "0"
+    },
+    "64": {
+        "teamA": "Fiorentina",
+        "teamB": "Venezia",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "65": {
+        "teamA": "Torino",
+        "teamB": "Atalanta",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "66": {
+        "teamA": "Inter",
+        "teamB": "Lecce",
+        "goalsA": "2",
+        "goalsB": "0"
+    },
+    "67": {
+        "teamA": "Monza",
+        "teamB": "Genoa",
+        "goalsA": "0",
+        "goalsB": "1"
+    },
+    "68": {
+        "teamA": "Parma",
+        "teamB": "AC Milan",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "69": {
+        "teamA": "Udinese",
+        "teamB": "Lazio",
+        "goalsA": "2",
+        "goalsB": "1"
+    },
+    "70": {
+        "teamA": "Juventus",
+        "teamB": "Como",
+        "goalsA": "3",
+        "goalsB": "0"
+    },
+    "71": {
+        "teamA": "Lecce",
+        "teamB": "Atalanta",
+        "goalsA": "0",
+        "goalsB": "4"
+    },
+    "72": {
+        "teamA": "Cagliari",
+        "teamB": "AS Roma",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "73": {
+        "teamA": "Lazio",
+        "teamB": "Venezia",
+        "goalsA": "3",
+        "goalsB": "1"
+    },
+    "74": {
+        "teamA": "Bologna",
+        "teamB": "Udinese",
+        "goalsA": "1",
+        "goalsB": "1"
+    },
+    "75": {
+        "teamA": "Verona",
+        "teamB": "Napoli",
+        "goalsA": "3",
+        "goalsB": "0"
+    },
+    "76": {
+        "teamA": "AC Milan",
+        "teamB": "Torino",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "77": {
+        "teamA": "Empoli",
+        "teamB": "Monza",
+        "goalsA": "0",
+        "goalsB": "0"
+    },
+    "78": {
+        "teamA": "Genoa",
+        "teamB": "Inter",
+        "goalsA": "2",
+        "goalsB": "2"
+    },
+    "79": {
+        "teamA": "Parma",
+        "teamB": "Fiorentina",
+        "goalsA": "1",
+        "goalsB": "1"
+    }
+}

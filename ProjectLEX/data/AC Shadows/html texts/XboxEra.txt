@@ -1,0 +1,107 @@
+Assassin’s Creed is finally set in Japan, and it has led to an instant classic. Shadows is the most refined, balanced, and impeccably produced game in the long-running franchise. As Yasuke the Samurai and Naoe the Shinobi, you’ll help the people and fight the tyrants while shaping Japan’s future. The delays were worth it; Ubisoft Montreal has crafted an epic tale.
+
+Featuring dual protagonists, Assassin’s Creed Shadows allows you to play the way you want the majority of the time. To begin, you will switch between Yasuke and Naoe as the story demands.  After a few hours, it’s all Naoe all the time until you progress deep enough into the story for Yasuke to re-enter the fray. From that point on, you can choose who you want to play as outside of a few major story missions, which will show you both of their perspectives.
+
+Naoe is a shinobi from the Iga region. Her gameplay features the classic AC style full of parkour, stealth, and assassinations. She is far and away the greatest athlete the series has ever seen. Standing roughly five feet tall, her agility and speed feel amazing to control. My wife laughed at her over-the-top acrobatics as she did full Olympic gymnast dismounts from any decent height.
+
+Yasuke is known as “The Giant” throughout the land.  Standing an imposing (at the time) 6 feet tall, with broad shoulders, he fights like the brutes from past titles. While Naoe’s stealth is good fun, Yasuke’s brute force will make you feel like a monster. He can climb a bit, though finding most eagle perch synchronization spots will require Naoe’s grappling hook and skills.  I highly recommend doing leaps of faith, another series staple, with Yasuke.  He’s so damned big and heavy in his armor that, well you should see for yourself.
+
+As amazing as the characters, story, gameplay, and music are, the star of the game is the world. Back at Gamescom 2024, I got to see a behind-closed-doors presentation on the improvements made to the Anvil engine. Wind, leaves, particulate- it’s all real, and it has spoiled other games.
+
+It is a country of rough weather with distinct seasons. The Anvil Engine handles all of it beautifully, with heavy winds blowing leaves of all different shades around and rain cascading off of roofs as it builds up on your character. I mostly played on GeForce Now to start with before shifting to Xbox Series X & PC once those builds were ready. No matter where I played the game, it looked and ran well, feeling extremely polished and well optimized.
+
+Xbox Series X Quality (30fps) and Balanced (40fps) modes look gorgeous, with the Performance (60fps) mode looking damned good, with some noticeable lighting downgrades. Running maxed out on GeForce Now with a 4080 or my local PC with a 7900xtx, I got a locked 60+ fps at Ultra settings. 
+It is one of the greatest-looking pieces of media I have ever seen. Feudal Japan is a perfect play space for Ubisoft’s artists to build a stunningly realized world full of life, color, and danger. Seeing the morning sun shining through the trees, how it properly cascades and shines through various material types, you have to see it. 
+
+I cannot overstate how amazing the lighting is, and when you add in the physical wind interactivity with grass, bushes, and trees shaking around, it is an astounding technical achievement.
+Also, I have to call out how incredible the facial animations are. One of the biggest improvements over passed titles, there are times the characters look completely human, with cutscenes shifting to 30fps on all platforms to up the texture and animation quality to its max level.
+
+All of this brilliant world-building and feel is in service of AC Shadow’s fantastic gameplay.  We’ll start with Naoe and her Shinobi style. For fans of the series, she is the greatest playing protagonist yet. Her focus is on parrying white and blue-colored incoming strikes and dodging the red-colored ones.
+Your quick attack is on the right bumper, with heavy on the right trigger. The left bumper is used for parrying, and B is dodge.  The left trigger activates your ranged abilities and ally call-ins (more on that later).
+
+Naoe has the following melee and ranged options:
+
+Melee: Katana, Tanto, and Kusarigama
+
+Ranged: Kunai, Shuriken, Bell, Smoke Bomb
+
+Skill Tree: Katana, Tanto, Kusarigama, Tools, Assassin, Shinobi
+
+Alongside all of this is the classic hidden blade, allowing her to quickly dispatch foes in a single blow as long as the number of health segments she can remove in one attack is more than their health bar. You start with the katana, and while it looks great, she’s weak in one-on-one fights. I preferred having the tanto out as it allows for dual assassinations, where she’ll use the short tanto blade and her hidden blade in unison.
+
+The Kusarigama is best for groups of enemies as you swing the heavy spike ball around on its chain while using the sickle for short-range hits. Kunai are heavy throwing daggers that can take out most regular enemies in a single headshot, while the shuriken (ninja stars) are best used in combo with your melee attacks as they are quick but low damage. While the small bell is great for distracting enemies away from a particular location, the greatest tool is the smoke bomb.
+
+Tossing one of those on the ground at your enemy’s feet makes them lose track of you, opening things up for an assassination attempt. By the end of the game, my assassinations could take upwards of 7 health segments off, so using these on bosses led to incredibly quick victories.
+
+Yasuke is a wholly different beast. No tools, only weapons, brute force, and heavy armor.
+
+Yasuke has the following melee and ranged options:
+
+Melee: Long Katana, Kanabo, Naginata
+
+Ranged: Long Bow, Teppo (one-shot rifle)
+
+Skill Tree: Long Katana, Kanabo, Naginata, Long Bow, Teppo, Samurai
+
+Yasuke has no hidden blade, his only assassination is of the brutal variety. He yells “I’m here” in various ways before chopping his opponent’s head off, smashing it with a hammer, or chopping both arms off and then the head with the pole sword. He is a vicious combatant who can take far more of a pounding than Naoe, which is good because he’s not the best at being silent.
+
+While you begin with the Long Katana, my favorite was the Kanabo.  It is an enormous club that Yasuke will use to hit home runs with. Your opponent’s heads are the balls, and they will go flying. AC Shadows is a violent game, full of body parts being chopped or knocked off, with the most brutal hits turning your enemy’s domes into a fine red mist.
+
+Naoe and Yasuke both have six distinct skill trees and each tree has dozens of nodes with a few active and many passive abilities. You can have two weapons and two active abilities equipped at any time on each. Your skills can be refunded for free whenever you choose, which allowed me to experiment with different playstyles without much fuss.
+
+I’d recommend focusing on Adrenaline chunks, which are used for abilities, and health segments removed on assassination. Every tree has multiple levels, and to unlock these, you’ll need to complete various tasks given red icons across the map. These can be meditation sessions for Naoe, finding lost scrolls in temples, or horseback archery runs with Yasuke. The map has dozens, if not hundreds, of these activities, and I spent a long time on them to get the mind points necessary for unlocking new skills.
+
+Some may not appreciate the grind, but as I naturally found more than enough side activities throughout the main story, I think it is well done overall. The map in Assassin’s Creed Shadows is enormous, spanning a decent chunk of mainland Japan. Utilizing the game’s various fast travel points, you can hop between areas and find more activities without issue, and my god, is there a lot to do.
+
+Shadows uses a new quest board system that slowly fills up with a series of circular zones or organization-specific quests. At the start of the game, you’ll have your giant main antagonist collective circle and one for Naoe. As you meet and unlock Yasuke, quests for him will appear. As you enter all of the game’s dozens of regions and sub-regions, more and more quest circles will be unveiled.
+
+By the time the full credits had rolled and I had played through the epilogue section, I was at roughly 50 hours. If I focused on just the main quest, I doubt I could have properly beaten things on normal difficulty in less than 30. With everything left on my map by the “end” and how the story leads to potential new adventures, I could see many having their 100+ hour playtimes like they did in Valhalla.
+
+Where that game suffered, its pacing, Shadows does not. Never once did I feel forced to do side content. I focused on and did it because it was so damned good and/or fun. I didn’t care if it was “fetch quest 40” in nature because of how damned good the game looked, sounded, and played while I was doing it.
+
+Yasuke and Naoe each have their own horses, and you can bring up a “take me here” guidance line, though there is no “press a button to auto travel along it” anymore.  I still had a solid 33% of the map left to explore after the credits rolled, with more areas and the factions within them littering my already enormous quest board.
+
+I don’t know that the number of quests is that much higher than in past games. The layout is, though, and you now always see exactly how much you’ve completed every time you look to do something new in the game’s vast, sweeping story.
+
+Assassins Creed Shadows allows you two story options to start with: choose your own adventure or canon mode. I did the “make your own story choices” style during my preview and chose to play through the canon version of events for my review. For the RPG fans out there, you will get a surprisingly different version of events, including the potential losses of allies that do not occur in the canon version.
+
+At one point, I had to rescue a friend that I had been working with throughout 10+ missions. There was no warning or timer on the screen; it just said “rescue x”. I messed up a few jumps and all of a sudden heard a gunshot. My “rescue x” changed to “avenge x” and my heart dropped. I quickly reloaded the last checkpoint to see if I could save them, and lo and behold, I could.
+
+When I properly executed each jump, I stopped the would-be killer right before his shot hit and saved my ally.  From that point on, they were an option to assist me in fights and spent their time with me at our home base (more on that in a bit). Shadow’s story is full of choices and consequences. How do you choose to react, and what does that mean for the future?  Can you forgive, and if so, was it the right decision?
+
+I saw that side of things in my preview of the game and admit it’s not what I come to AC games for. I’m all for the option to have a canon mode, which let me not worry about fully micro-managing my choices. Thankfully, I lucked out and saved my entire family in AC Odyssey, but I labored over the choices. Here, I was safe to follow Naoe and Yasuke on their path as they found allies, helped the people, and came to terms with their trauma.
+
+Speaking of allies, early on in Naoe’s story, you’ll unlock the hideout. This home base is a little homestead builder, full of buildings, paths, decorations, pets, and more to place in it. As you travel the lands, loot chests, complete quests, and visit vendors, you’ll find hundreds of items to decorate the hideout to match what you want.
+
+The main buildings offer passive benefits like extra scouts, whom you’ll use to help you find objectives. Without them, you’re given a main area, sub-region, and subber-sub-region to try and find your target in. Scouts can also take marked resources from inside strongholds, which they’ll retrieve for you at the end of a season.
+
+Seasons change slowly throughout the game, though you can choose to jump to the next one from the map when it’s close enough. Spring, Fall, Winter, Summer- they’re all here in various fashions, and they’ll completely change up the map, clear your local bounties, and refresh your scout supply.
+
+One of the buildings you’ll unlock is a scout hub, with many of them also dotting each city you visit. For 800 mon (in-game currency), you can unlock them as fast travel and scout/ally hub spots. There are systems on systems, with dojos that let you train up your allies so that they’re more powerful when you call them in.  One of the first allies I found was named Yaya, a giant of a woman. After upgrading her, she’d run in and choke-slam any poor bastard who dared get in her way.
+
+If you want to get your interior decorator on, then the hunt for new items and the ease with which you can place them should see dozens of hours lost. To build new buildings that give benefits, you’ll need materials, which are some of the main benefits of looting castles and other various strongholds.  Many nights were spent scouring the map for new places to rob from the shadows as Naoe or blast through as Yasuke.
+
+I won’t get into any story specifics as I like to keep it as spoiler-free as possible. Naoe and Yasuke will travel across various lands with less of a focus on the overarching Assassin vs. Templar narrative than previous games. It is still very much there, and when it comes to the front, it is brilliant. To even get to all this, though, you’ll have to go through the new AC Nexus launcher.
+
+Assassin’s Creed Shadows is the first game to use this new Animus Hub, where each of the recent titles from Origins to now is available to launch (as long as you own them and they’re installed). It isn’t the Call of Duty HQ app, you’re still loading each game individually. It’s the front end that does all the work.
+In that front end, you’ll have the Memories (games), any new Animus-focused story segments, a content library, and free in-game reward tracks (battle passes). There are two of the “battle passes” to start with, and to progress along them, you’ll do daily and weekly in-game quests to gain keys.  These keys get you items, and there is already a full microtransaction store that gets you level-appropriate gear with incredibly over-the-top looks.
+
+Without spending a penny, I had enough in-game mtx money to buy a few items and had progressed a decent way through the first “battle pass”. I’m sure people will be furious about it for a week or two, but this system is nothing new and not nearly as egregious as the one they tried way back with Unity.
+
+Finally, I’d like to talk about the game’s vibes. It is feudal Japan, full of nanban like the Portuguese who are slowly trying to dominate the region. As the slave Diogo, you’ll fight against this to become the samurai Yasuke. Ubisoft Montreal never hold back from calling Yasuke what he is, the respect he commands, nor do they shy away from his terrible past.
+
+Naoe is a young woman at the start, living with her father in a small village a few years after her mother’s death. Finding out what happened to her, who her father truly is (she gets a hidden blade for a reason!), and where her tale takes her is a delight. The friendship she forms with Yasuke feels natural, at least in the canon mode, and the way the story leaves off ties up every main question I had while offering up intriguing new ones for future content in this stunningly realized world.
+
+The music is a blend of classical tunes and full location-appropriate instruments without ever feeling like a parody. Funky fight music carries battles while sweeping tracks add to the grandeur of every vista. There is a canon voice mode as well, featuring the correct languages for each character, mainly Japanese and Portuguese, as needed. I used this for most of my playthrough, opting for English when my eyes grew tired from reading subtitles.  The canon voice acting is excellent, while the English voice acting has a generally high level with the occasional off-performance.
+
+I was completely satisfied with the game’s story and how it ended.  Things aren’t wrapped up with a neat bow, and I fully expect a lot more content in the future starring these characters. Whether it’s only expansions or full sequels, I cannot wait to head back to Japan to continue this league’s expertly crafted journey.
+
+There’s so much more I could talk about but… spoilers. Assassin’s Creed: Shadows is the best entry in the series. There is no area in which it is lacking, with expert pacing despite its enormous size. Naoe and Yasuke shine as dual protagonists, as does Japan itself. This one has been my favorite in a year of amazing releases.
+
+A Living, Breathing World
+Excellent Story
+Fantastic Gameplay
+Gorgeous Soundtrack
+Just Damned Cool
+
+A few of the English VOs are Weak

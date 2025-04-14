@@ -1,0 +1,44 @@
+pewniaki:
+    id - linia 6
+    tytuł - linia 7
+    daty - linie 22-24
+    assety graficzne, do przemyślenia - linia 50 staticAssets
+
+statsy - linia 225 summary.stats
+
+serie - linia 322 summary.seriesList
+
+moderatorzy - linia 9098:
+    id, name, url, powerLevel, pronouns, areaId, signupDate
+
+kategorie - linia 1044:
+    isMisc - czy jest różne, chyba zwykla organizacja na dropdown list
+    isPerLevel - czy jest dostępna dla każdego levela (nie licząc full game)(true) czy tylko dla pełnej gry (false)
+    enforceMs - czy trzeba podawać wynik w milisekundach
+    
+variables:
+    categoryScope:
+        -1 dla wszystkich kategorii
+        0 tylko dla pełnej gry
+        1 tylko dla podanej kategorii w polu categoryId
+    categoryId - jeśli scope to 1, to wtedy tutaj jest podane id kategorii, która posiada ten variable
+    levelScope:
+        -2 dla wszystkich leveli i full game
+        -1 tylko levele
+        0 tylko full game
+        1 tylko dla podanego levela w polu levelId
+    levelId - jeśli scope to 1, to wtedy tutaj jest podane id levela, który posiada ten variable
+    isMandatory - określa czy musi być podane value
+    isSubcategory - określa czy variable jest traktowane jako subcategory
+    isUserDefined - N/A - nie zauważyłem żadnego wpływu na mój cel
+    isObsoleting - N/A - nie zauważyłem żadnego wpływu na mój cel
+    defaultValue - pierwotnie wybrana opcja
+    archived - wiadomo
+    displayMode - określa w jaki sposób wybierasz value na stronie, czy lista, czy opcje (nie wiem jaka jest różnica między 0 a 2)
+
+
+
+
+
+
+Pamietaj by sprawdzic gdy jest coop i sa podani 2 userzy (np. Cuphead)

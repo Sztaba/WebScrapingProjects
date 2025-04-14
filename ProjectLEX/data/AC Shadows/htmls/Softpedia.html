@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://cdnssl.softpedia.com/" />
+<!-- Google tag (gtag.js) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', { 
+	'ad_storage': 'denied',
+	'ad_user_data': 'denied',
+	'ad_personalization': 'denied',
+	'analytics_storage': 'denied',
+	'security_storage': 'granted',
+	'personalization_storage': 'granted',
+	'functionality_storage': 'granted',
+	'wait_for_update': 1000
+});
+gtag('js', new Date());
+gtag('config', 'G-49KYDE8P1Z', { 'cookie_domain': 'softpedia.com', 'anonymize_ip': true });  //, 'send_page_view': false });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-49KYDE8P1Z"></script>
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'.concat('/choice/', 'ef319LWA1Q2Gu', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  function makeGppStub() {
+    const CMP_ID = 10;
+    const SUPPORTED_APIS = [
+      '2:tcfeuv2',
+      '6:uspv1',
+      '7:usnatv1',
+      '8:usca',
+      '9:usvav1',
+      '10:uscov1',
+      '11:usutv1',
+      '12:usctv1'
+    ];
+
+    window.__gpp_addFrame = function (n) {
+      if (!window.frames[n]) {
+        if (document.body) {
+          var i = document.createElement("iframe");
+          i.style.cssText = "display:none";
+          i.name = n;
+          document.body.appendChild(i);
+        } else {
+          window.setTimeout(window.__gpp_addFrame, 10, n);
+        }
+      }
+    };
+    window.__gpp_stub = function () {
+      var b = arguments;
+      __gpp.queue = __gpp.queue || [];
+      __gpp.events = __gpp.events || [];
+
+      if (!b.length || (b.length == 1 && b[0] == "queue")) {
+        return __gpp.queue;
+      }
+
+      if (b.length == 1 && b[0] == "events") {
+        return __gpp.events;
+      }
+
+      var cmd = b[0];
+      var clb = b.length > 1 ? b[1] : null;
+      var par = b.length > 2 ? b[2] : null;
+      if (cmd === "ping") {
+        clb(
+          {
+            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+            cmpStatus: "stub", // possible values: stub, loading, loaded, error
+            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+            signalStatus: "not ready", // possible values: not ready, ready
+            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+            sectionList: [],
+            applicableSections: [-1],
+            gppString: "",
+            parsedSections: {},
+          },
+          true
+        );
+      } else if (cmd === "addEventListener") {
+        if (!("lastId" in __gpp)) {
+          __gpp.lastId = 0;
+        }
+        __gpp.lastId++;
+        var lnr = __gpp.lastId;
+        __gpp.events.push({
+          id: lnr,
+          callback: clb,
+          parameter: par,
+        });
+        clb(
+          {
+            eventName: "listenerRegistered",
+            listenerId: lnr, // Registered ID of the listener
+            data: true, // positive signal
+            pingData: {
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // list of supported APIs
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "removeEventListener") {
+        var success = false;
+        for (var i = 0; i < __gpp.events.length; i++) {
+          if (__gpp.events[i].id == par) {
+            __gpp.events.splice(i, 1);
+            success = true;
+            break;
+          }
+        }
+        clb(
+          {
+            eventName: "listenerRemoved",
+            listenerId: par, // Registered ID of the listener
+            data: success, // status info
+            pingData: {
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // CMP ID
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "hasSection") {
+        clb(false, true);
+      } else if (cmd === "getSection" || cmd === "getField") {
+        clb(null, true);
+      }
+      //queue all other commands
+      else {
+        __gpp.queue.push([].slice.apply(b));
+      }
+    };
+    window.__gpp_msghandler = function (event) {
+      var msgIsString = typeof event.data === "string";
+      try {
+        var json = msgIsString ? JSON.parse(event.data) : event.data;
+      } catch (e) {
+        var json = null;
+      }
+      if (typeof json === "object" && json !== null && "__gppCall" in json) {
+        var i = json.__gppCall;
+        window.__gpp(
+          i.command,
+          function (retValue, success) {
+            var returnMsg = {
+              __gppReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: i.callId,
+              },
+            };
+            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+          },
+          "parameter" in i ? i.parameter : null,
+          "version" in i ? i.version : "1.1"
+        );
+      }
+    };
+    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+      window.__gpp = window.__gpp_stub;
+      window.addEventListener("message", window.__gpp_msghandler, false);
+      window.__gpp_addFrame("__gppLocator");
+    }
+  };
+
+  makeGppStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<style>
+@font-face { 
+	font-display: optional; 
+	font-family: 'museo_sans_cond'; 
+	font-weight: 700;
+	font-style: normal;
+	src: url('https://www.softpedia.com/_fonts/museosanscnd-700-webfont.eot?v=1x199'); 
+	src: url('https://www.softpedia.com/_fonts/museosanscnd-700-webfont.eot?#iefix') format('embedded-opentype'), 
+		url('https://www.softpedia.com/_fonts/museosanscnd-700-webfont.woff2?v=1x199') format('woff2'), 
+		url('https://www.softpedia.com/_fonts/museosanscnd-700-webfont.woff?v=1x199') format('woff'), 
+		url('https://www.softpedia.com/_fonts/museosanscnd-700-webfont.ttf?v=1x199') format('truetype');
+}
+
+@font-face { 
+	font-display: optional; 
+	font-family: 'museo_sans_cond'; 
+	font-weight: 500; 
+	font-style: normal;
+	src: url('https://www.softpedia.com/_fonts/museosanscnd-500-webfont.eot?v=1x199'); 
+	src: url('https://www.softpedia.com/_fonts/museosanscnd-500-webfont.eot?#iefix') format('embedded-opentype'), 
+		url('https://www.softpedia.com/_fonts/museosanscnd-500-webfont.woff2?v=1x199') format('woff2'), 
+		url('https://www.softpedia.com/_fonts/museosanscnd-500-webfont.woff?v=1x199') format('woff'), 
+		url('https://www.softpedia.com/_fonts/museosanscnd-500-webfont.ttf?v=1x199') format('truetype');
+}
+
+@font-face { 
+	font-family: "FontAwesome"; font-weight: normal; font-style: normal; font-display: swap; text-rendering: optimizeLegibility; 
+	src: url('https://cdnssl.softpedia.com/_fonts/fontawesome-webfont.eot?v=1x199'); 
+	src: url('https://cdnssl.softpedia.com/_fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), 
+		url('https://cdnssl.softpedia.com/_fonts/fontawesome-webfont.woff2?v=1x199') format('woff2'), 
+		url('https://cdnssl.softpedia.com/_fonts/fontawesome-webfont.woff?v=1x199') format('woff'), 
+		url('https://cdnssl.softpedia.com/_fonts/fontawesome-webfont.ttf?v=1x199') format('truetype');
+}
+
+html, input, select, textarea, option, button, li { font-family: 'museo_sans_cond', Bodoni MT, Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, sans-serif; font-weight: 500; }
+body { min-width: 970px; position:relative; background-color: #fff; color: #000; }
+form, dl, body, p { padding: 0; margin: 0; }
+.mgbot_10 { margin-bottom: 10px !important; }
+.storybox1, .storybox1 .legible, .nv_revby, .legible, .legible li { line-height: 1.5em; font-size: 19px; font-weight: 500; }
+.storybox1 { color:#000000; }
+</style>
+<link crossorigin rel="preload" href="https://www.softpedia.com/_fonts/museosanscnd-700-webfont.woff2?v=1x199" as="font" type="font/woff2">
+<link crossorigin rel="preload" href="https://www.softpedia.com/_fonts/museosanscnd-500-webfont.woff2?v=1x199" as="font" type="font/woff2">
+<link crossorigin rel="preload" href="https://cdnssl.softpedia.com/_fonts/fontawesome-webfont.woff2?v=1x199" as="font" type="font/woff2">
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2364887827571271" crossorigin="anonymous"></script>
+<script>
+window._33across = window._33across || {}; window._33across.idMappingsConfig = window._33across.idMappingsConfig || {}; window._33across.idMappingsConfig.pid = '0014000001YrMpFAAV';
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function(){
+	if(window.sp_havefloatad>0) { window.slot_Softpedia_software_programpage_sidefloat_1 = googletag.defineSlot("/1004334/Softpedia/software_programpage_widesky", window.sp_floatads, "Softpedia_software_programpage_sidefloat_1").addService(googletag.pubads()).setTargeting("sticky_vertical", "yes");  }
+		window.slot_Softpedia_news_page_P1 = googletag.defineSlot("/1004334/Softpedia/news_page", [[970,90]], "Softpedia_news_page_P1").addService(googletag.pubads());
+	window.slot_Softpedia_news_page_P2 = googletag.defineSlot("/1004334/Softpedia/news_page", [[300,250]], "Softpedia_news_page_P2").addService(googletag.pubads());
+	window.slot_Softpedia_news_page_P3 = googletag.defineSlot("/1004334/Softpedia/news_page", [[970,90],[970,250]], "Softpedia_news_page_P3").addService(googletag.pubads());
+	
+
+	googletag.pubads().disableInitialLoad();
+	googletag.pubads().setCentering(true);
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices();
+});
+function GPT_GO(){ 
+	console.log('GPT_GO()'); 
+	(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;
+	googletag.cmd.push(function() { googletag.pubads().refresh(); }); 
+}
+
+function APS_GO() {	
+	GPT_GO();
+}
+</script>
+
+<script>
+window.__scripts_initialized = 0;
+window.__tcfapi('addEventListener', 2, function(tcData,success) {
+	//console.log(success, tcData);
+	if(window.__scripts_initialized == 0 && success && (tcData.eventStatus === 'tcloaded' || tcData.eventStatus == 'useractioncomplete')) {
+		window.__scripts_initialized = 1; window.__tcfapi('removeEventListener', 2, function (success) { }, tcData.listenerId);		
+		console.log('enabling scripts');
+
+		APS_GO();
+	}
+});
+</script>
+
+<title>Assassin’s Creed Shadows Review (PS5)</title>
+<meta name="robots" content="max-image-preview:large" /><meta name=supported-media content="only screen and (min-width: 640px)">
+<meta name="language" content="english" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=980" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="canonical" href="https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml" />
+<meta name="author" content="Cosmin Vasile"><link rel="alternate" href="https://news.softpedia.com/newsRSS/Global-0.xml" type="application/rss+xml" title="Softpedia News" />
+<link rel="alternate" href="https://news.softpedia.com/newsRSS/Global-0.xml" type="application/rss+xml" title="Softpedia News - Game reviews" />
+<meta property="twitter:title" content="Assassin’s Creed Shadows Review (PS5)">
+<meta property="og:title" content="Assassin’s Creed Shadows Review (PS5)">
+<meta name="keywords" content="stealth, action, adventure, feudal Japan, open world">
+<meta name="description" content="Another evolutionary rather than revolutionary installment">
+<meta property="twitter:description" content="Another evolutionary rather than revolutionary installment">
+<meta property="og:description" content="Another evolutionary rather than revolutionary installment">
+<meta property="og:article:published_time" content="2025-03-23T18:20:32+0000">
+<meta property="twitter:image" content="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-2.jpg">
+<meta property="og:image" content="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-2.jpg">
+<meta property="fb:app_id" content="505430742898262">
+<meta property="og:type" content="article">
+<meta property="og:article:publisher" content="https://www.facebook.com/pages/Softpedia/122839394413621">
+<meta property="og:site_name" content="softpedia">
+<meta property="twitter:url" content="https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml">
+<meta property="og:url" content="https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@Softpedia">
+<meta property="twitter:creator" content="@Softpedia">
+<link crossorigin fetchpriority="highest" rel="stylesheet" type="text/css" href="https://cdnssl.softpedia.com/_min/?g=cssbase,cssbase_2018&amp;vv=5111" /><!--<link rel="icon" type="image/x-icon" href="https://cdnssl.softpedia.com/_img/favicon.ico"><link rel="shortcut icon" type="image/x-icon" href="https://cdnssl.softpedia.com/_img/favicon.ico">-->
+<link rel="icon" type="image/png" sizes="192x192" href="https://cdnssl.softpedia.com/_img/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://cdnssl.softpedia.com/_img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdnssl.softpedia.com/_img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdnssl.softpedia.com/_img/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="512x512" href="https://cdnssl.softpedia.com/_img/favicon_512.png">
+<meta name="msapplication-TileImage" sizes="512x512" content="https://cdnssl.softpedia.com/_img/favicon_512.png" />
+<link rel="mask-icon" sizes="any" href="https://cdnssl.softpedia.com/_img/spdfavicon.svg" color="#002873">
+
+<script>var hp_dwlcounter = 2734719071;</script>
+</head>
+
+<body>
+	<div class="wrapper posrel" id="wrapper">
+		<div class="topbar">
+						<div class="menubar">
+				<!--<div id="bg-menubar"></div>-->
+				<div class="container_48">
+					<div class="grid_48">
+						<div id="topovl1">&nbsp;</div>
+						<div id="bg-logo"></div>
+						<span id="brand">
+							<a href="https://www.softpedia.com/" class="dspblock" title="Softpedia"><span class="logov" data-src="https://cdnssl.softpedia.com/_img/softpedia_logo.png">SOFTPEDIA&reg;</span></a>
+						</span>
+						<div class="navtopm ">
+														<ul class="lev1 navsect locmenu" role="menubar">
+								<li role="menuitem" ><a class="upcase fw500" href="https://win.softpedia.com/" title="Windows Software"><i class="fa fa-windows"></i>&nbsp; Windows Apps</a></li>
+								<li role="menuitem" class="mgleft_10"><a class="upcase fw500 mgleft_7" href="https://mac.softpedia.com/"  title="Mac Apps"><i class="fa fa-apple"></i>&nbsp; Mac Apps</a></li>
+								<li role="menuitem" class="mgleft_10"><a class="upcase fw500 mgleft_7" href="https://linux.softpedia.com/" title="Linux Software"><i class="fa fa-linux"></i>&nbsp; Linux Apps</a></li>
+								<li role="menuitem" class="mgleft_10"><a class="upcase fw500 mgleft_7" href="https://drivers.softpedia.com/" title="Windows Device Drivers"><i class="fa fa-graphics"></i>&nbsp; Drivers</a></li>						
+								<li role="menuitem" class="mgleft_10"><a class="upcase fw500 mgleft_7" href="https://mobile.softpedia.com/apk/" title="Android Apps (APK)"><i class="fa fa-android"></i>&nbsp; Android APK</a></li>							
+								<li role="menuitem" class="mgleft_10 active"><a class="upcase fw500 mgleft_7" href="https://news.softpedia.com/" title="Technology News"><i class="fa fa-newspaper"></i>&nbsp; Reviews</a></li>
+							</ul>
+														<ul class="lev1 navico" id="navicos">
+								<!--<li class="fa fa-heart nosel" data-src="love"></li>-->
+								<a href="/dyn-search.php"><li class="fa fa-search nosel"></li></a>
+								<li class="fa fa-info nosel" data-src="info"></li>
+								<li class="fa fa-user nosel" onclick="showloginovl();"></li>							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+					</div>
+		<div role="main" class="main ">
+											<div class="statusbar  posrel"><div class="container_48">
+					<div class="grid_27 breadcrumb posrel">
+		<i class="fa fa-bars jhref spmenu2" id="spmenu" title="Windows categories"></i>
+
+				<div class="breadcrumb-cnt ellip">			
+			<span itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="1" /><a href="https://www.softpedia.com/" itemprop="item" title="Softpedia Homepage"><span itemprop="name">Softpedia</span></a></span>&gt;<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="2" /><a href="https://news.softpedia.com/" itemprop="item" title="News Homepage"><span itemprop="name">News</span></a></span>&gt;<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="3" /><a href="https://news.softpedia.com/cat/Reviews/" itemprop="item" title="Reviews"><span itemprop="name">Reviews</span></a></span>&gt;<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="4" /><a href="https://news.softpedia.com/cat/Reviews/Games-reviews/" itemprop="item" title="Game reviews"><span itemprop="name">Game reviews</span></a></span></span>		</div>
+			</div>
+
+		<div class="grid_21"><div class="backtosp"><a href="https://www.softpedia.com/" title="Softpedia Homepage" class="bold">Softpedia Homepage &nbsp;&nbsp;<i class="fa fa-arrow-right col-red-l"></i></a></div></div>
+		<div class="clearfix"></div>
+					</div></div>
+							<div class="container_48">
+	<div class="pagetop grid_48 pagetop2 srcnobg">
+		<h1 id="rr_title" class="hsz30 w580">Assassin’s Creed Shadows Review (PS5)</h1>
+			<div class="main-search main-search-2018" id="main-search">
+	<form role="search" action="/dyn-search.php" method="GET" class="mgtop_15">
+	<input aria-label="Search" id="hp_search" type="text" value="Search..." onkeydown="if(this.value=='Search...') this.value='';" onclick="if(this.value=='Search...') this.value='';" onblur="if(this.value=='') this.value='Search...';" onfocus="if(this.value=='Search...') this.value='';" name="search_term">
+	<button type="submit"><i class="fa fa-search"></i></button>
+		</form></div>
+		</div>
+
+		<div class="grid_48 ad adwblue ad-970x90 mgtop_30" id="_wlts_lead" data-cty="PL">
+		<div id="Softpedia_news_page_P1" style="width:970px; height: auto; min-height:90px"></div>
+<script>googletag.cmd.push(function(){ 
+googletag.display("Softpedia_news_page_P1");
+});</script>	</div>
+	</div>
+
+<div class="clearfix"></div>
+<div class="container_48" itemscope itemtype="http://schema.org/Review">
+	<div class="mgtop_20 posrel">
+		<div class="revrail" id="revrail">
+			<div class="rr_rating">
+				<span class="rr_text">very good</span>
+				<span class="rr_stars rrs4"></span>
+			</div>
+								</div>
+		<div class="revcnt">
+			<div class="rc_infobar fr">
+				<div class="rc_infobox">
+					<h5 class="summary">key review info</h5>
+					<ul>
+						<li class="ellip" itemprop="itemReviewed" itemscope itemtype="http://schema.org/SoftwareApplication">Game:
+						<meta itemprop="applicationCategory" content="Game" />
+						<meta itemprop="operatingSystem" content="Playstation 5" />
+						<strong itemprop="name">Assassin&#039;s Creed Shadows</strong></li>
+						<li>Platform: <strong>Playstation 5</strong></li>
+						<li class="bold jhref expand transition150ms" onclick="sp__toggle(this, '#requirements')">Show system requirements</li>
+						<div id="requirements" class="requirements hidden">A working PlayStation 5.</div>
+												<li>Reviewed on: <time class="bold" itemprop="datePublished">March 23, 2025 18:20 GMT</time></li>
+						<li class="authorship" itemscope itemtype="http://schema.org/Person" itemprop="author">
+							Written by: <a itemprop="url" class="bold col-blue" href="https://news.softpedia.com/editors/browse/cosmin-vasile" title="Editor profile and more articles by Cosmin Vasile"><span itemprop="name">Cosmin Vasile</span></a>
+						</li>
+					</ul>
+				</div>
+								<div class="ad" id="_wlts" data-nosnippet>
+					<div id="Softpedia_news_page_P2" style="width:300px; height: auto; min-height:250px"></div>
+<script>googletag.cmd.push(function(){ 
+googletag.display("Softpedia_news_page_P2");
+});</script>				</div>
+							</div>
+
+			<div class="posrel w480 mgbot_20">
+			<div class="hp_news_gr_2 bbgallery"><a onclick="if((typeof $('#ng_container a')[0]) != 'undefined') $('#ng_container a')[0].click(); return false;" href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-2.jpg" title="Assassin&#039;s Creed Shadows key art" target="_blank" itemprop="image"><img src="https://news-cdn.softpedia.com/images/fitted/480x290/assassin-s-creed-shadows-review-ps5-537724.jpg" width="480" height="290" alt="Assassin&#039;s Creed Shadows key art" title="Assassin&#039;s Creed Shadows key art" itemprop="thumbnailUrl" /></a></div></div>
+			<article class="legible sepbrd2 review_text" itemprop="reviewBody">
+			<p class="intro"><strong itemprop="description">After a short delay, Assassin&rsquo;s Creed Shadows is here to emerge fans in a world they&rsquo;ve been expecting for many years: Feudal Japan. The successor to 2023&rsquo;s Assassin&rsquo;s Creed Mirage, Shadows does something that no other titles in the series have done before: it allows fans to play with two rather than just one character.</strong></p>
+<p class="mgbot_20">Assassin&rsquo;s Creed Shadows tells of the story of a shinobi assassin, Naoe, and a samurai, Yasuke, in a time of extreme political turbulence. The way the game is structured allows players to taste both sides of the story, as they will take control of both Naoe and Yasuke at different moments of the plot.</p>
+<p class="mgbot_20">It&rsquo;s a bold approach that has been done before in games, but not by the Assassin&rsquo;s Creed series if you don&rsquo;t count the scripted moments from the previous installments in the series. However, while the mechanic is new for the franchise and the execution is rather decent, I always had the feeling that I&rsquo;m playing two different games whenever I switched characters.</p>
+<p class="mgbot_20">In my book, Naoe, the ultimate shinobi assassin, is the way to play Assassin&rsquo;s Creed Shadows. Yasuke, the black samurai, feels and plays like a juggernaut who squashes his enemies with a simple swing of the sword. The guy is not just a force of nature, but he&rsquo;s nearly unkillable.</p>
+<div class="galart2"><div class="galart2_main"><img onclick="$('#ng_container a').children()[1].click();" src="https://news-cdn.softpedia.com/images/fitted/620x348/assassin-s-creed-shadows-review-ps5-537724-3.jpg" title="Assassin&#039;s Creed Shadows" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_rail"><div class="galart2_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[2].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-4.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[3].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-5.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div onclick="$('#ng_container a').children()[4].click();" class="galart2_last" title="Open full photo gallery"><div class="galart2_last_inner">+4<span>more</span></div></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[4].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-6.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[5].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-7.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[6].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-8.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[7].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-9.jpg" alt="Assassin&#039;s Creed Shadows" /></div></div></div>
+<p class="mgbot_20">Yasuke seems like a character from another franchise that&rsquo;s been artificially transplanted into the world of Assassin&rsquo;s Creed. It&rsquo;s the type of character who shoots first and asks questions later. In a game that heavily relies on stealth and assassinations, a Rambo-type of character is really odd.</p>
+<p class="mgbot_20">Overall, Yasuke is a well-written character with a decent story who gets surpassed by Naoe in about every aspect. In the end, it&rsquo;s what playstyle you like more: a stealth or guns blazing approach.</p>
+<p class="mgbot_20">After spending dozens of hours with the game, I can safely say that Naoe is by far the main star of the Assassin&rsquo;s Creed Shadows. She not only perfectly fits the scenario, but also the pedigree of the Assassin&rsquo;s Creed series.</p>
+<p class="mgbot_20">Trained in becoming a deadly assassin by her father, Naoe begins her journey of discovery and revenge with just a traditional katana and basic knowledge about the art of being a shinobi.</p>
+<p class="mgbot_20">You&rsquo;ll spend the first 10 hours (at least) playing as Naoe, get to know her better and understand her motivations. Ubisoft is going hard with the exposition of her story, as there are numerous cutscenes in the first few hours of the game.</p>
+<p class="mgbot_20">Naoe&rsquo;s gameplay style perfectly fits the Assassin&rsquo;s Creed franchise, but she&rsquo;s also a very genuine character. Her journey from being a wannabe shinobi to a ruthless killer is very interesting to experience, even if the game&rsquo;s story is nothing to be excited about.</p>
+<p class="mgbot_20">One of the game&rsquo;s main RPG mechanics, the skill tree, is also its weakest point. Every time Naoe and Yasuke level up, they can use a mastery point in one of the six skill trees that are meant to influence the way you play the character or at least improve them in certain aspects.</p>
+<p class="mgbot_20">I can&rsquo;t say that I felt more powerful putting one point in Naoe&rsquo;s katana skill tree that increased her damage with this specific weapon by 2 or 4 percent. Especially in a game that doesn&rsquo;t tell you how much HP an enemy has or how much damage you do with a weapon.</p>
+<p class="mgbot_20">The entire skill tree of both characters feels like a trick meant to induce the idea that the RPG aspect matters, whereas in much of these so-called improvements aren&rsquo;t meaningful for your playstyle until you start using engravings.</p>
+<div class="videospot" title="Click to play video"><a style="width:600px" href="https://youtu.be/_JzywR97gUs" class="hp_news_gr_2" data-embed="https://www.youtube-nocookie.com/embed/_JzywR97gUs?wmode=transparent" target="_blank" title="Click to play video" rel="nofollow noopener" target="_blank"><img data-gidx="-1" width="600" class="ggnoads" src="https://img.youtube.com/vi/_JzywR97gUs/hqdefault.jpg" /><span style="left: 170px">Play Video</span></a></div>
+<p class="mgbot_20">Engravings become available much later in the game and can be used to empower your weapons. They really influence a character&rsquo;s playstyle and it&rsquo;s one of the things that I liked most in Assassin&rsquo;s Creed Shadows.</p>
+<p class="mgbot_20">Just like every other Assassin&rsquo;s Creed game in the last few years, the world of Shadows is huge. Searching every nook and cranny for loot will take quite a while if you&rsquo;re a completionist, but there&rsquo;s a catch.</p>
+<p class="mgbot_20">Not everything will appear on the map even if you scout the area from the traditional viewpoints, unless you specifically enable this feature at the beginning of the game. There&rsquo;s no Eagle to help you scout an area, so once you climb a viewpoint, you&rsquo;ll have the option to Observe the area and tag any point of interest you find.</p>
+<p class="mgbot_20">From my experience, this feature has been terribly implemented, as you&rsquo;ll have to pinpoint the cursor while in Freeaim mode right above the POI, otherwise you won&rsquo;t be able to tag it.</p>
+<p class="mgbot_20">It&rsquo;s a frustrating experience that can be skipped by simply enabling the option to show everything on the map once you scout an area from a viewpoint. Unless you want to pay $10 and get the special add-on from the game&rsquo;s virtual, which will show everything on the map.</p>
+<p class="mgbot_20">The combat has suffered some changes from the previous installments in the series, but that doesn&rsquo;t mean it&rsquo;s better. Ubisoft has tried a more soulslike approach where commands like parry and dodge give you some bonuses executed correctly.</p>
+<p class="mgbot_20">Every time you manage to parry or dodge an enemy, you live them &ldquo;vulnerable&rdquo; to your attacks for a little while. This means that you do more damage for a brief period. Is it worth trying to parry an enemy to get this bonus? Absolutely not. You can simply dodge all the enemy&rsquo;s attacks and be just as successful.</p>
+<p class="mgbot_20">But combat has never been the strong point of an Assassin&rsquo;s Creed game, so I&rsquo;m happy to report that the stealth and assassination mechanics are extremely satisfying and the best parts when it comes to combat.</p>
+<p class="mgbot_20">Trying to find a way to stealthily infiltrate a stronghold and doing it without being spotted feels extremely rewarded. But if that&rsquo;s not how you approach things, Naoe can be as apt at combat as Yasuke when she needs to be, especially if you invest heavily in specific skill trees.</p>
+<p class="mgbot_20">Story-wise, Assassin&rsquo;s Creed Shadows is serviceable, and I&rsquo;ll just leave it at that since I don&rsquo;t want to spoil anything. I especially appreciated the different tones of Naoe and Yasuke&rsquo;s stories, but I can&rsquo;t help the feeling that the former is much more flesh out than the latter.</p>
+<div class="galart2"><div class="galart2_main"><img onclick="$('#ng_container a').children()[8].click();" src="https://news-cdn.softpedia.com/images/fitted/620x348/assassin-s-creed-shadows-review-ps5-537724-10.jpg" title="Assassin&#039;s Creed Shadows" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_rail"><div class="galart2_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[9].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-11.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[10].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-12.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div onclick="$('#ng_container a').children()[11].click();" class="galart2_last" title="Open full photo gallery"><div class="galart2_last_inner">+4<span>more</span></div></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[11].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-13.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[12].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-14.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[13].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-15.jpg" alt="Assassin&#039;s Creed Shadows" /></div><div class="galart2_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))"><img onclick="$('#ng_container a').children()[14].click();" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-16.jpg" alt="Assassin&#039;s Creed Shadows" /></div></div></div><hr class="mgtop_20">
+<h4 class="icol-thegood mgtop_60">The Good</h4>
+<div class="revconcs"><ul class="rv_bullets"><li class="plus">Impressive visuals, expansive open-world</li><li class="plus">Naoe is an interesting character</li><li class="plus">Stealth, assassination mechanics are very satisfying</li></ul>
+</div>
+<h4 class="icol-thebad mgtop_40">The Bad</h4>
+<div class="revconcs"><ul class="rv_bullets"><li class="minus">Story is all over the place</li><li class="minus">Base building feels forced</li><li class="minus">Combat is a hit and miss</li><li class="minus">RPG elements don’t matter</li></ul>
+</div>
+<h4 class="icol-thetruth mgtop_40" id="Conclusions">Conclusion</h4>
+<div class="revconcs">Assassin&rsquo;s Creed Shadows is definitely an evolutionary rather than a revolutionary installment in the series. Every mechanic from the previous games has been polished, refined to make more sense, but there&rsquo;s really nothing new that would radically change anything for the better.
+<p class="mgbot_20">I don&rsquo;t think the extra year that Ubisoft used to make the game was worth it since Shadows isn&rsquo;t much different than Valhalla, Origins, or Mirage. Yes, it&rsquo;s much more polished and looks a lot better visually, but it doesn&rsquo;t bring back the gameplay and mystery of the first games in the series.</p>
+<p class="mgbot_20">Overall, I had a great time with Assassin&rsquo;s Creed Shadows, but that&rsquo;s because I&rsquo;m a fan of the series. I have doubts that a newcomer to the series will find it equally interesting, especially since the overarching story is just serviceable.</p>
+<p class="mgbot_20"><em>Review key provided by the publisher.</em></div></p>
+			</article>
+
+
+			<div class="rating_box mgtop_40">
+				<div class="rb_labels" itemscope itemtype="http://schema.org/Rating" itemprop="reviewRating">
+					story <span class="rb_val">7</span><br/>
+					gameplay <span class="rb_val">8</span><br/>
+					concept <span class="rb_val">9</span><br/>
+					graphics <span class="rb_val">9</span><br/>
+					audio <span class="rb_val">9</span><br/>
+					multiplayer <span class="rb_val">0</span><br/>
+					<span class="col-red-l">final rating</span> <span class="rb_val col-red" itemprop="ratingValue">8.5</span>
+				<meta itemprop="bestRating" content="10"/><meta itemprop="worstRating" content="0"/>
+				</div>
+				<div class="rb_gauges">
+					<div class="rb_gauge bg-blue-b" style="width:140px"></div>
+					<div class="rb_gauge bg-green-b" style="width:160px"></div>
+					<div class="rb_gauge bg-yellow-b" style="width:180px"></div>
+					<div class="rb_gauge bg-orange-b" style="width:180px"></div>
+					<div class="rb_gauge bg-blue-b" style="width:180px"></div>
+					<div class="rb_gauge bg-green-b" style="width:0px"></div>
+					<div class="rb_gauge bg-red-l" style="width:170px"></div>
+				</div>
+			</div>
+			<div class="rb_award mgtop_40 mgbot_40">
+				<img src="https://www.softpedia.com/_img/rba_sp.png" width="220" height="60" />
+				<div class="rba_label"><span>Editor&#039;s review</span></div>
+				<div class="rba_stars bg-red-l rbs4"><span>very good</span></div>
+			</div>
+			<div id="clrfx" class="clearfix mgtop_20">&nbsp;</div>
+		</div>
+	</div>
+	<div class="revfoot">NEXT REVIEW: <a href="https://www.softpedia.com/reviews/games/pc/wwe-2k25-review-537723.shtml" title="WWE 2K25">WWE 2K25</a><!--<span class="hits"><b>0</b> hits</span>--></div>
+	<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml"/>
+	<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+		<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+			<meta itemprop="url" content="http://cdn.softpedia.com/_img/softpedia_logo_rss.png">
+			<meta itemprop="width" content="250">
+			<meta itemprop="height" content="100">
+		</div>
+		<meta itemprop="name" content="Softpedia">
+	</div>
+</div>
+
+<div class="container_48 news-article">
+		<h2 class="mgtop_40 grid_48 nosel fsz26">Assassin’s Creed Shadows screenshots <span class="nowrap">(19 Images)</span></h2>
+	<div id="ng_container" class="galart mgbot_20 mgtop_20" style="width: 100%">
+	<a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-2.jpg" title="Assassin&#039;s Creed Shadows key art" target="_blank" class="galart_main" data-galidx="<?=$k?>"><img width="620" src="https://news-cdn.softpedia.com/images/fitted/620x/assassin-s-creed-shadows-review-ps5-537724-2.jpg" alt="Assassin&#039;s Creed Shadows key art" data-description="" /></a><div class="galart_rail" style="width: 100%; box-sizing: border-box;"><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-3.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-3.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-4.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-4.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-5.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-5.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-6.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img " data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-6.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><div onclick="$('#ng_container a').children()[5].click();" class="galart_last" title="Open full photo gallery"><div class="galart_last_inner">+14<span>more</span></div></div><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-7.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-7.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-8.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-8.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-9.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-9.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-10.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-10.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-11.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-11.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-12.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-12.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-13.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-13.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-14.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-14.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-15.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-15.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-16.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-16.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-17.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-17.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-18.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-18.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-19.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-19.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a><a href="https://news-cdn.softpedia.com/images/news2/assassin-s-creed-shadows-review-ps5-537724-20.jpg" title="Assassin&#039;s Creed Shadows" target="_blank" class="galart_img hidden" data-title="Assassin&#039;s Creed Shadows" onmouseenter="toggledesc($(this))" onmouseleave="toggledesc($(this))" data-galidx="<?=$k?>"><img width="160" height="120" src="https://news-cdn.softpedia.com/images/newsrsz/assassin-s-creed-shadows-review-ps5-537724-20.jpg" alt="Assassin&#039;s Creed Shadows" data-description="" /></a>		</div>
+	</div>
+	</div>
+
+<div class="container_48">
+		<div class="grid_48 ad adwblue ad-970 mgtop_40 mgbot_10" id="_wlts_lead" data-cty="PL">
+		<div id="Softpedia_news_page_P3" style="width:970px; height: auto; min-height:90px"></div>
+<script>googletag.cmd.push(function(){ 
+googletag.display("Softpedia_news_page_P3");
+});</script>	</div>
+	
+	<div id="lazyloadmore"></div>
+</div>
+
+
+
+<script type="application/ld+json" id="schema-gallery-data">{ "@context": "http://schema.org", "@type": "ImageGallery", "url": "https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml", "associatedMedia": [ [{"text":"Assassin&#039;s Creed Shadows key art","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-2.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-2.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-3.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-3.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-4.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-4.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-5.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-5.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-6.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-6.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-7.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-7.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-8.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-8.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-9.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-9.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-10.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-10.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-11.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-11.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-12.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-12.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-13.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-13.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-14.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-14.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-15.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-15.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-16.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-16.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-17.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-17.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-18.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-18.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-19.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-19.jpg"},{"text":"Assassin&#039;s Creed Shadows","contentUrl":"https:\/\/news-cdn.softpedia.com\/images\/news2\/assassin-s-creed-shadows-review-ps5-537724-20.jpg","thumbnailUrl":"https:\/\/news-cdn.softpedia.com\/images\/newsrsz\/assassin-s-creed-shadows-review-ps5-537724-20.jpg"}] ] }</script>
+<style>.more-data-slot { width: auto; }</style>
+		</div></div>
+		
+		<div class="clearfix"></div>
+		<div class="footer" id="footer">
+			<div class="mgtop_40">
+				<div class="social">
+					<div class="container_48 posrel">
+						<div class="grid_37"><div class="home-search"><form role="search" action="/dyn-search.php" method="GET"><div class="fa fa-search"></div><input aria-label="Search" type="text" value="Search here..." onkeydown="if(this.value=='Search here...') this.value='';" onclick="if(this.value=='Search here...') this.value='';" onblur="if(this.value=='') this.value='Search here...';" name="search_term" /></form></div></div>
+						<div class="grid_11 mgtop_20 ta_right"><span class="nosel logof">i <i class="fa fa-heart col-red-l"></i> softpedia&reg;</span></div>
+					</div>
+				</div>
+				<div class="copyright_cnt"><div class="copyright f_content">
+					&copy; 2001-2025 <span itemprop="name">Softpedia</span>.
+					All rights reserved. Softpedia&reg; and the Softpedia&reg; logo are registered trademarks of SoftNews NET SRL					<br/>
+					<a href="https://www.softpedia.com/user/contact.php" rel="nofollow" title="Contact">Contact</a>
+					&nbsp;&bull;
+					<a href="https://www.softpedia.com/user/privacy.shtml" rel="nofollow" title="Privacy Policy">Privacy Policy</a>
+					&nbsp;&bull;
+					<a href="https://www.softpedia.com/user/cookies.shtml" rel="nofollow" title="Cookie Policy">Cookie Policy</a>
+					&nbsp;&bull;
+					EU residents: <a title="Cookie Settings" href="javascript:;" onclick="window.__tcfapi('displayConsentUi', 2, function(){});">Cookie Settings</a>				</div></div>
+			</div>
+		</div>
+		
+<div id="spsbtns"><div id="newsfbtn" class="rgbutton" onclick="spsite_newstip();"><div class="rotate90r">news tip <i class="fa fa-lightbulb-o rotate270r"></i></div></div><div id="feedbackb" class="rgbutton" onclick="spsite_feedback('https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml');"><div class="rotate90r">feedback <i class="fa fa-info-circle rotate270r"></i></div></div>
+</div>
+<div id="spovl1" class="ovlgrad1 novig"><div class="spovl1box"><div class="spovl1box2">&nbsp;</div></div></div><!-- overlay 1 -->
+<div id="spovl2"><div class="spovl2box"><div class="spovl2box2">&nbsp;</div></div></div><!-- overlay 2 -->
+<div id="spovl3"><div class="spovl3box">&nbsp;</div></div><!-- overlay 3 -->
+
+<script defer crossorigin src="https://cdnssl.softpedia.com/_min/?g=jsbase&amp;jv=4145"></script>
+<script>window.spcsrf="aurybNbp6G8B3y9rGvzCIroOdaUwJW0m";</script><!--news_gallery,news_load_more_lazy,sectionnews,is_review--><script>
+var sp_nsroot=".softpedia.com";
+var sp_xaja_root="https://www.softpedia.com/";
+var pe_section='news';
+var sp_trkev=1;
+var tm_act='desktop';
+var tm_open=false;
+var tm_evset=false;
+var spjs_social={"pagetitle":"Assassin\u2019s Creed Shadows Review (PS5)","pageurl":"https:\/\/www.softpedia.com\/reviews\/games\/playstation-5\/assassin-039-s-creed-shadows-review-537724.shtml","mediaurl":""};
+var spsocial_pagetitle='Assassin’s Creed Shadows Review (PS5)';
+var spsocial_pageurl='https://www.softpedia.com/reviews/games/playstation-5/assassin-039-s-creed-shadows-review-537724.shtml';
+var spsocial_mediaurl="";
+var spjs_cat_id=133;
+var spjs_prog_version="";
+var sp_catid=133;
+var spjs_comm_total=0;
+var spjs_prog_tsf=0;
+var spjs_news_title="Assassin’s Creed Shadows Review (PS5)";
+var spjs_news_id=537724;
+var spjs_auth_uid=0;
+var spjs_auth={"user":"","name":"","mail":""};
+window.aegal_xdsect='news';
+</script>
+<script defer src="/_min/jsstore.php?l=bmV3c19nYWxsZXJ5LG5ld3NfbG9hZF9tb3JlX2xhenksc2VjdGlvbm5ld3MsaXNfcmV2aWV3&amp;f=bGFuZy9FTi5qcyxqcXVlcnkuc3dpcGVib3guanMsanF1ZXJ5LnN3aXBlYm94Lmpz&amp;jv=4013"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	if(!sp_getcookie('cooknotif2018')) {
+		$('body').append('<div id="cookienotif">We use cookies to improve your experience. By using the site you agree to the use of cookies. '+
+			'<a class="red" href="javascript:;" onclick="$(\'#cookienotif\').remove();sp_setcookie(\'cooknotif2018\', 1, 365);">Accept cookies &amp; close</a>'+			
+			'<br/>For more information and options regarding cookies and personal data see our <a href="http://www.softpedia.com/user/cookies.shtml" title="Cookie Policy">Cookies Policy</a> and <a href="http://www.softpedia.com/user/privacy.shtml" title="Privacy Policy">Privacy Policy</a>'+
+						'</div>');
+	}
+});
+
+</script>
+
+<script type="application/ld+json">{ "@context": "http://schema.org", "@type": "Organization", "url": "https://www.softpedia.com/", "logo": "https://cdnssl.softpedia.com/_img/rba_sp_hd.png", "name": "Softpedia", "sameAs" : [ "https://www.facebook.com/softpediacom/", "https://twitter.com/Softpedia", "https://www.instagram.com/softpedia/", "https://flipboard.com/@softpedia/softpedia-news-ji14q1huy" ] }</script>
+<script type="application/ld+json">{ "@context": "http://schema.org", "@type": "WebSite", "name": "Softpedia", "url": "https://www.softpedia.com/" }</script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92ab3c0f8b42f59d',t:'MTc0MzcxMTI5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
